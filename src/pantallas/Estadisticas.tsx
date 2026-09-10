@@ -10,6 +10,7 @@ const NOMBRE_MODO: Record<Modo, string> = {
   clasico: 'Clásico',
   contrarreloj: 'Contrarreloj',
   categoria: 'Categoría',
+  nivel: 'Nivel',
   estudio: 'Estudio',
 };
 

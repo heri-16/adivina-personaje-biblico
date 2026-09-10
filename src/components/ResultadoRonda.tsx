@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookMarked, Check, X } from 'lucide-react';
 import type { Personaje } from '@/types';
+import { etiquetaNivel } from '@/types';
 import { CATEGORIAS } from '@/data/personajes';
 import { puntosPara } from '@/lib/puntaje';
 import { lanzarConfeti } from '@/lib/confeti';
@@ -71,7 +72,8 @@ export function ResultadoRonda({
         </h2>
         <p className="mt-0.5 font-sans text-[0.75rem] uppercase tracking-[0.16em] text-ink-faint">
           {etiquetaCategoria(personaje.categoria)} ·{' '}
-          {personaje.testamento === 'AT' ? 'Antiguo Testamento' : 'Nuevo Testamento'}
+          {personaje.testamento === 'AT' ? 'Antiguo Testamento' : 'Nuevo Testamento'} ·{' '}
+          {etiquetaNivel(personaje.dificultad)}
         </p>
 
         <div className="mt-3 flex items-start gap-2 rounded-card border border-line/20 bg-surface/60 px-3 py-2.5">

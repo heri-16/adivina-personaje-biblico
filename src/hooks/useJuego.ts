@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { Personaje, PartidaResumen, RondaResultado } from '@/types';
+import type {
+  Dificultad,
+  Personaje,
+  PartidaResumen,
+  RondaResultado,
+} from '@/types';
 import {
   personajes,
   personajesPorCategoria,
@@ -11,6 +16,7 @@ import { validarRespuesta } from '@/lib/texto';
 
 export const RONDAS_CLASICO = 10;
 export const RONDAS_CATEGORIA = 10;
+export const RONDAS_NIVEL = 10;
 export const SEGUNDOS_CONTRARRELOJ = 60;
 
 export type SeleccionCategoria = 'profeta' | 'rey' | 'mujer' | 'apostol' | 'NT';
@@ -18,11 +24,16 @@ export type SeleccionCategoria = 'profeta' | 'rey' | 'mujer' | 'apostol' | 'NT';
 export type ConfigJuego =
   | { modo: 'clasico' }
   | { modo: 'contrarreloj' }
-  | { modo: 'categoria'; seleccion: SeleccionCategoria };
+  | { modo: 'categoria'; seleccion: SeleccionCategoria }
+  | { modo: 'nivel'; nivel: Dificultad };
 
 function construirCola(config: ConfigJuego): Personaje[] {
   if (config.modo === 'clasico') return muestra(personajes, RONDAS_CLASICO);
   if (config.modo === 'contrarreloj') return barajar(personajes);
+  if (config.modo === 'nivel') {
+    const pool = personajes.filter((p) => p.dificultad === config.nivel);
+    return muestra(pool, Math.min(RONDAS_NIVEL, pool.length));
+  }
   const pool =
     config.seleccion === 'NT'
       ? personajesPorTestamento('NT')

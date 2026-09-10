@@ -5,9 +5,11 @@ import {
   Flame,
   Instagram,
   Layers,
+  Signal,
   Sparkles,
   Timer,
 } from 'lucide-react';
+import type { Dificultad } from '@/types';
 import type { PreferenciaTema } from '@/lib/almacenamiento';
 import type { EstadisticasDerivadas } from '@/hooks/useEstadisticas';
 import type { ConfigJuego, SeleccionCategoria } from '@/hooks/useJuego';
@@ -15,6 +17,7 @@ import { personajes } from '@/data/personajes';
 import { BotonTema } from '@/components/BotonTema';
 import { TarjetaModo } from '@/components/TarjetaModo';
 import { SelectorCategoria } from '@/components/SelectorCategoria';
+import { SelectorNivel } from '@/components/SelectorNivel';
 
 interface Props {
   stats: EstadisticasDerivadas;
@@ -34,9 +37,12 @@ export function Inicio({
   onEstadisticas,
 }: Props) {
   const [catAbierta, setCatAbierta] = useState(false);
+  const [nivelAbierto, setNivelAbierto] = useState(false);
 
   const elegirCategoria = (seleccion: SeleccionCategoria) =>
     onIniciar({ modo: 'categoria', seleccion });
+
+  const elegirNivel = (nivel: Dificultad) => onIniciar({ modo: 'nivel', nivel });
 
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-[540px] flex-col px-5">
@@ -93,6 +99,15 @@ export function Inicio({
         />
         <div>
           <TarjetaModo
+            icono={Signal}
+            titulo="Por nivel"
+            descripcion="Elige Fácil, Medio o Difícil."
+            onClick={() => setNivelAbierto((v) => !v)}
+          />
+          {nivelAbierto && <SelectorNivel onElegir={elegirNivel} />}
+        </div>
+        <div>
+          <TarjetaModo
             icono={Layers}
             titulo="Por categoría"
             descripcion="Profetas, reyes, mujeres, apóstoles o NT."
@@ -103,7 +118,7 @@ export function Inicio({
         <TarjetaModo
           icono={BookOpenText}
           titulo="Estudio"
-          descripcion="Repasa las 100 fichas sin jugar."
+          descripcion="Repasa todas las fichas, con grupo de jóvenes."
           onClick={onEstudio}
         />
       </div>

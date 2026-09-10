@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
-import { Search } from 'lucide-react';
+import { GraduationCap, Search } from 'lucide-react';
 import type { Categoria } from '@/types';
 import type { PreferenciaTema } from '@/lib/almacenamiento';
-import { CATEGORIAS, personajes } from '@/data/personajes';
+import { CATEGORIAS, IDS_JUVENTUD, personajes } from '@/data/personajes';
 import { normalizar } from '@/lib/texto';
 import { Encabezado } from '@/components/Encabezado';
 import { FichaEstudio } from '@/components/FichaEstudio';
@@ -27,16 +27,34 @@ const CHIPS_CATEGORIA: (Categoria | 'todas')[] = [
   'otro',
 ];
 
+const JOVENES_SET = new Set(IDS_JUVENTUD);
+
 export function Estudio({ dominados, tema, onAlternarTema, onVolver }: Props) {
   const [testamento, setTestamento] = useState<FiltroTestamento>('todos');
   const [categoria, setCategoria] = useState<Categoria | 'todas'>('todas');
+  const [soloJovenes, setSoloJovenes] = useState(false);
   const [busqueda, setBusqueda] = useState('');
 
   const dominadosSet = useMemo(() => new Set(dominados), [dominados]);
 
+  const elegirCategoria = (c: Categoria | 'todas') => {
+    setCategoria(c);
+    setSoloJovenes(false);
+  };
+  const elegirTestamento = (t: FiltroTestamento) => {
+    setTestamento(t);
+    setSoloJovenes(false);
+  };
+  const alternarJovenes = () => {
+    setSoloJovenes((v) => !v);
+    setCategoria('todas');
+    setTestamento('todos');
+  };
+
   const lista = useMemo(() => {
     const q = normalizar(busqueda);
     return personajes
+      .filter((p) => !soloJovenes || JOVENES_SET.has(p.id))
       .filter((p) => testamento === 'todos' || p.testamento === testamento)
       .filter((p) => categoria === 'todas' || p.categoria === categoria)
       .filter((p) => {
@@ -44,7 +62,7 @@ export function Estudio({ dominados, tema, onAlternarTema, onVolver }: Props) {
         return [p.nombre, ...p.alias].some((n) => normalizar(n).includes(q));
       })
       .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
-  }, [testamento, categoria, busqueda]);
+  }, [testamento, categoria, soloJovenes, busqueda]);
 
   return (
     <div className="flex min-h-[100dvh] flex-col">
@@ -70,15 +88,30 @@ export function Estudio({ dominados, tema, onAlternarTema, onVolver }: Props) {
             />
           </div>
 
-          <div className="mt-2.5 flex gap-1.5">
+          <button
+            type="button"
+            onClick={alternarJovenes}
+            aria-pressed={soloJovenes}
+            className={[
+              'mt-2.5 flex w-full items-center justify-center gap-2 rounded-pill border px-3 py-2 font-sans text-[0.82rem] transition-colors',
+              soloJovenes
+                ? 'border-gold/60 bg-gold/12 text-gold'
+                : 'border-line/25 text-ink-soft',
+            ].join(' ')}
+          >
+            <GraduationCap size={15} strokeWidth={1.7} />
+            Grupo de jóvenes
+          </button>
+
+          <div className="mt-2 flex gap-1.5">
             {(['todos', 'AT', 'NT'] as FiltroTestamento[]).map((t) => (
               <button
                 key={t}
                 type="button"
-                onClick={() => setTestamento(t)}
+                onClick={() => elegirTestamento(t)}
                 className={[
                   'flex-1 rounded-pill border px-3 py-1.5 font-sans text-[0.8rem] transition-colors',
-                  testamento === t
+                  !soloJovenes && testamento === t
                     ? 'border-gold/60 bg-gold/12 text-gold'
                     : 'border-line/25 text-ink-soft',
                 ].join(' ')}
@@ -94,10 +127,10 @@ export function Estudio({ dominados, tema, onAlternarTema, onVolver }: Props) {
                 <button
                   key={c}
                   type="button"
-                  onClick={() => setCategoria(c)}
+                  onClick={() => elegirCategoria(c)}
                   className={[
                     'whitespace-nowrap rounded-pill border px-3 py-1.5 font-sans text-[0.78rem] transition-colors',
-                    categoria === c
+                    !soloJovenes && categoria === c
                       ? 'border-gold/60 bg-gold/12 text-gold'
                       : 'border-line/25 text-ink-soft',
                   ].join(' ')}

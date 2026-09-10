@@ -14,6 +14,7 @@ const TITULOS: Record<string, string> = {
   clasico: 'Modo clásico',
   contrarreloj: 'Contrarreloj',
   categoria: 'Por categoría',
+  nivel: 'Por nivel',
 };
 
 interface Props {

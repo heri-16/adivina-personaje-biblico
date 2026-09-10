@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import type { Personaje } from '@/types';
+import { etiquetaNivel } from '@/types';
 import { CATEGORIAS } from '@/data/personajes';
 
 interface Props {
@@ -34,7 +35,7 @@ export function FichaEstudio({ personaje, dominado }: Props) {
             )}
           </span>
           <span className="mt-0.5 block font-sans text-[0.72rem] uppercase tracking-[0.14em] text-ink-faint">
-            {cat} · {personaje.testamento} · {personaje.cita}
+            {cat} · {personaje.testamento} · {etiquetaNivel(personaje.dificultad)}
           </span>
         </span>
         <ChevronDown

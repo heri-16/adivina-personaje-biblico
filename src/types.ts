@@ -29,7 +29,17 @@ export interface Personaje {
   dato: string;
 }
 
-export type Modo = 'clasico' | 'contrarreloj' | 'categoria' | 'estudio';
+export type Modo = 'clasico' | 'contrarreloj' | 'categoria' | 'nivel' | 'estudio';
+
+export const NIVELES: { valor: Dificultad; etiqueta: string }[] = [
+  { valor: 1, etiqueta: 'Fácil' },
+  { valor: 2, etiqueta: 'Medio' },
+  { valor: 3, etiqueta: 'Difícil' },
+];
+
+export function etiquetaNivel(d: Dificultad): string {
+  return NIVELES.find((n) => n.valor === d)?.etiqueta ?? '';
+}
 
 export interface RondaResultado {
   personajeId: string;

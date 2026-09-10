@@ -128,7 +128,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['isac'],
     testamento: 'AT',
     categoria: 'patriarca',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue el segundo de los tres grandes patriarcas nómadas del Génesis.',
       'Nació cuando su madre ya tenía noventa años y todos lo daban por imposible.',
@@ -162,7 +162,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['esau', 'edom'],
     testamento: 'AT',
     categoria: 'patriarca',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Nació primero, por unos segundos, en una familia de patriarcas nómadas.',
       'Era hombre pelirrojo y muy velludo, cazador y hombre del campo.',
@@ -230,7 +230,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['benjamin', 'benoni', 'ben-oni'],
     testamento: 'AT',
     categoria: 'patriarca',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue el menor de doce hermanos y el único nacido ya en la tierra prometida.',
       'Su madre murió al darlo a luz camino de Belén y alcanzó a llamarlo "hijo de mi dolor", pero el padre le cambió el nombre.',
@@ -281,7 +281,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['aaron', 'aharon'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Vivió en la época de la salida de Egipto y era tres años mayor que el libertador de su pueblo.',
       'Como su hermano tartamudeaba, él fue su portavoz ante el faraón.',
@@ -298,7 +298,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['josue', 'yehoshua', 'oseas hijo de nun'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue el ayudante y luego el sucesor del hombre que sacó a Israel de Egipto.',
       'Fue uno de los doce espías enviados a explorar Canaán, y uno de los dos únicos que confiaron en poder entrar.',
@@ -315,7 +315,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['kaleb'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Vivió en la época del éxodo y era de la tribu de Judá.',
       'Fue enviado junto a otros once a espiar la tierra de Canaán.',
@@ -485,7 +485,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['eli', 'heli'],
     testamento: 'AT',
     categoria: 'juez',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue juez y sumo sacerdote en el santuario de Silo, donde estaba el arca.',
       'Vio a una mujer mover los labios sin voz orando por un hijo y la creyó borracha; luego la bendijo.',
@@ -570,7 +570,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['roboan', 'roboam', 'rehoboam'],
     testamento: 'AT',
     categoria: 'rey',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Heredó de su padre el reino más rico que Israel había tenido.',
       'Los ancianos le aconsejaron aliviar los impuestos; los jóvenes, endurecerlos.',
@@ -587,7 +587,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['jeroboan', 'jeroboam', 'jeroboam i'],
     testamento: 'AT',
     categoria: 'rey',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue el primer rey del reino del norte tras la división; había sido capataz de las obras del rey sabio.',
       'Un profeta rasgó un manto nuevo en doce pedazos y le entregó diez, anunciando que reinaría sobre esas tribus.',
@@ -621,7 +621,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['josafat', 'jehoshafat', 'yehoshafat'],
     testamento: 'AT',
     categoria: 'rey',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue un rey de Judá recordado como bueno, que quitó lugares altos y envió maestros de la ley por las ciudades.',
       'Se alió por matrimonio con la dinastía de Acab en el norte, lo que le trajo problemas.',
@@ -655,7 +655,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['manases', 'menashe'],
     testamento: 'AT',
     categoria: 'rey',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue el rey que más tiempo gobernó en Judá: cincuenta y cinco años, tras un padre muy piadoso.',
       'Reconstruyó los altares paganos que su padre había derribado y puso un ídolo dentro del templo.',
@@ -710,7 +710,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['shemuel'],
     testamento: 'AT',
     categoria: 'profeta',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue el último de los jueces y el primero de los grandes profetas, en la transición hacia la monarquía.',
       'Su madre, estéril, lo pidió en oración en Silo y lo entregó al servicio del santuario en cuanto lo destetó.',
@@ -727,7 +727,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['natan', 'nathan'],
     testamento: 'AT',
     categoria: 'profeta',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue el profeta de la corte durante el reinado del rey músico de Israel.',
       'Transmitió al rey la promesa de que su casa y su trono permanecerían para siempre.',
@@ -863,7 +863,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['yoel'],
     testamento: 'AT',
     categoria: 'profeta',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue un profeta de Judá cuyo libro no menciona reyes, lo que hace muy difícil datarlo.',
       'Poco se sabe de él: apenas se conserva el nombre de su padre, que no aparece en ningún otro pasaje.',
@@ -1088,7 +1088,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['andres', 'andreas'],
     testamento: 'NT',
     categoria: 'apostol',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue uno de los primeros discípulos, pescador de oficio en Galilea.',
       'Antes había seguido a Juan el Bautista, y fue él quien llevó a su hermano mayor ante Jesús.',
@@ -1105,7 +1105,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['santiago', 'jacobo', 'santiago el mayor', 'santiago hijo de zebedeo'],
     testamento: 'NT',
     categoria: 'apostol',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue pescador en Galilea y uno de los tres discípulos del círculo íntimo del maestro.',
       'Trabajaba con su hermano menor remendando redes en la barca de su padre cuando fueron llamados.',
@@ -1139,7 +1139,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['felipe', 'philippos'],
     testamento: 'NT',
     categoria: 'apostol',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue uno de los doce, natural de Betsaida, el mismo pueblo de Pedro y Andrés.',
       'Nada más ser llamado, fue a buscar a un amigo y le dijo: "hemos hallado a aquel de quien escribió Moisés".',
@@ -1156,7 +1156,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['bartolome', 'natanael', 'nataniel', 'bar-tolmai'],
     testamento: 'NT',
     categoria: 'apostol',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue uno de los doce; en tres listas figura con un nombre y en el evangelio de Juan con otro distinto.',
       'Era de Caná de Galilea, el pueblo del agua convertida en vino.',
@@ -1190,7 +1190,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['mateo', 'levi', 'matthaios'],
     testamento: 'NT',
     categoria: 'apostol',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue uno de los doce, y antes tenía un oficio odiado por sus paisanos.',
       'Estaba sentado en el banco de los tributos, en Cafarnaúm, cuando oyó "sígueme" y se levantó.',
@@ -1326,7 +1326,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['tito', 'titus'],
     testamento: 'NT',
     categoria: 'otro',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue un colaborador de Pablo, de origen totalmente griego, no judío.',
       'Pablo lo presentó en Jerusalén como caso de prueba: un gentil al que no se obligó a circuncidarse.',
@@ -1343,7 +1343,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['silas', 'silvano', 'silvanus'],
     testamento: 'NT',
     categoria: 'otro',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue profeta en la iglesia de Jerusalén y ciudadano romano, elegido para llevar la carta del concilio a Antioquía.',
       'Sustituyó a Bernabé como compañero de Pablo en el segundo viaje misionero.',
@@ -1394,7 +1394,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['apolos', 'apollos', 'apolo'],
     testamento: 'NT',
     categoria: 'otro',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue un judío de Alejandría, "varón elocuente y poderoso en las Escrituras", que llegó a Éfeso predicando.',
       'Solo conocía "el bautismo de Juan", hasta que Priscila y Aquila lo instruyeron con más precisión en su casa.',
@@ -1445,7 +1445,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['zaqueo', 'zacchaeus'],
     testamento: 'NT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue jefe de los recaudadores de impuestos en Jericó y hombre muy rico.',
       'Era de baja estatura y no alcanzaba a ver por encima del gentío.',
@@ -1462,7 +1462,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['nicodemo', 'nicodemus'],
     testamento: 'NT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue fariseo y miembro del Sanedrín, "un principal entre los judíos".',
       'Fue a ver a Jesús de noche, para que no lo vieran, y lo llamó "maestro venido de Dios".',
@@ -1517,7 +1517,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['rivka', 'rebekah'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Vivía en Padán-aram, en Mesopotamia, y era parienta lejana de un patriarca nómada.',
       'Un criado extranjero la encontró junto a un pozo y ella se ofreció a sacar agua también para sus diez camellos.',
@@ -1534,7 +1534,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['rajel', 'rachel'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Era pastora en Padán-aram y prima de un patriarca que huía de su propio hermano.',
       'Él la conoció junto a un pozo, apartó él solo la piedra de la boca y la besó llorando.',
@@ -1551,7 +1551,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['rajab', 'racab'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Vivía en una casa adosada a la muralla de una ciudad cananea condenada a caer.',
       'Ejercía la prostitución, y aun así arriesgó la vida por los dos espías israelitas que llegaron a su puerta.',
@@ -1568,7 +1568,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['debora', 'deborah', 'devora'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Vivió en la época de los jueces y fue la única mujer que gobernó como tal en Israel.',
       'También era profetisa, y se sentaba a impartir justicia bajo una palmera entre Ramá y Betel.',
@@ -1585,7 +1585,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['dalila', 'delilah', 'dalilah'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Vivía en el valle de Sorec, en la frontera entre Israel y los filisteos, en la época de los jueces.',
       'Los cinco príncipes filisteos le ofrecieron mil cien piezas de plata cada uno a cambio de un solo dato.',
@@ -1636,7 +1636,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['abigail', 'abigael'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Vivió en el sur de Judá cuando el hombre ungido como próximo rey aún huía por el desierto de un monarca celoso.',
       'Estaba casada con un hombre rico, grosero y dado a la bebida, dueño de miles de ovejas en el Carmelo.',
@@ -1687,7 +1687,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['jezabel', 'jezebel', 'izebel'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue una princesa fenicia, hija del rey de Sidón, casada con un rey del reino del norte de Israel por alianza política.',
       'Impuso en Israel el culto a Baal y Asera, mantenía a cientos de sus profetas a su mesa y mandó matar a los del Señor.',
@@ -1721,7 +1721,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['magdalena', 'maria de magdala'],
     testamento: 'NT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Era originaria de un pueblo de pescadores a orillas del lago de Galilea llamado Magdala.',
       'Jesús había echado de ella siete demonios, y desde entonces lo seguía y ayudaba a sostener al grupo con sus bienes.',
@@ -1742,7 +1742,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['seth'],
     testamento: 'AT',
     categoria: 'patriarca',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Vivió en la primera generación de la humanidad, cuando la familia del primer hombre apenas empezaba a crecer.',
       'Nació para ocupar el lugar de un hermano al que otro hermano había matado en el campo.',
@@ -1759,7 +1759,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['cain'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue el primer ser humano nacido de mujer, según el relato del Génesis.',
       'Trabajaba la tierra, mientras que su hermano menor cuidaba ovejas.',
@@ -1776,7 +1776,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['habel'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Perteneció a la primera familia humana y fue pastor de ovejas.',
       'Presentó a Dios los primogénitos de su rebaño y su grosura.',
@@ -1793,7 +1793,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['matusalen', 'methuselah'],
     testamento: 'AT',
     categoria: 'patriarca',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Perteneció a las generaciones anteriores al gran diluvio, en la línea de Set.',
       'Su padre fue el hombre que "caminó con Dios" y fue arrebatado sin morir.',
@@ -1827,7 +1827,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['melquisedec', 'melchisedec'],
     testamento: 'AT',
     categoria: 'rey',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue a la vez rey de una ciudad llamada Salem y sacerdote del Dios Altísimo.',
       'Salió al encuentro de un patriarca que volvía de rescatar a su sobrino y a varios reyes derrotados.',
@@ -1861,7 +1861,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['ismael', 'ishmael'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue el primer hijo de un gran patriarca, nacido de una esclava egipcia.',
       'Antes de nacer, el ángel dijo de él que sería "como asno montés", con la mano contra todos y todos contra él.',
@@ -1929,7 +1929,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['potifar', 'potiphar'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Fue capitán de la guardia del faraón de Egipto.',
       'Compró a un joven hebreo a unos mercaderes y, al ver que todo le prosperaba, lo puso al frente de toda su casa.',
@@ -2273,7 +2273,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['jonatan', 'jonathan', 'jonatan hijo de saul'],
     testamento: 'AT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue príncipe heredero de Israel y arquero temible, en tiempos del primer rey.',
       'Su alma "quedó ligada" con la del joven ungido en secreto; le dio su manto, su espada y su arco.',
@@ -2562,7 +2562,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['mical', 'michal'],
     testamento: 'AT',
     categoria: 'mujer',
-    dificultad: 3,
+    dificultad: 2,
     pistas: [
       'Era la hija menor del primer rey de Israel, y amaba al joven que había matado al gigante filisteo.',
       'Su padre se la dio por esposa a cambio de cien prepucios de filisteos, esperando que muriera en el intento.',
@@ -2685,7 +2685,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['omri'],
     testamento: 'AT',
     categoria: 'rey',
-    dificultad: 2,
+    dificultad: 3,
     pistas: [
       'Fue un general proclamado rey por su ejército, que tuvo que ganar una guerra civil de cuatro años contra un rival llamado Tibni.',
       'Compró una colina a un hombre llamado Semer por dos talentos de plata y edificó sobre ella una nueva capital.',
@@ -2906,7 +2906,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['joacim', 'joaquim', 'eliaquim rey'],
     testamento: 'AT',
     categoria: 'rey',
-    dificultad: 2,
+    dificultad: 3,
     pistas: [
       'Fue puesto en el trono del reino del sur por el faraón Necao, que le cambió el nombre y le impuso un fuerte tributo.',
       'Construyó su palacio con trabajo forzado y sin pagar jornal, y Jeremías lo condenó por ello.',
@@ -3165,7 +3165,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['jose carpintero', 'jose de nazaret', 'jose esposo de maria'],
     testamento: 'NT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Era carpintero en Nazaret, de la casa de David, comprometido con una joven que quedó encinta antes de que vivieran juntos.',
       'Quiso dejarla en secreto para no exponerla a la vergüenza, hasta que un ángel le habló en un sueño.',
@@ -3182,7 +3182,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['herodes el grande', 'herodes i'],
     testamento: 'NT',
     categoria: 'rey',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Fue rey de Judea por nombramiento de Roma y un constructor colosal: amplió el templo de Jerusalén hasta convertirlo en asombro de su época.',
       'Recibió a unos magos de oriente que preguntaban por el "rey de los judíos" recién nacido, y se turbó él y toda la ciudad con él.',
@@ -3284,7 +3284,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['barrabas', 'barabas'],
     testamento: 'NT',
     categoria: 'otro',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Era un preso famoso, encarcelado por una revuelta en la ciudad y por un homicidio.',
       'El gobernador tenía la costumbre de soltar a un preso en la fiesta de la Pascua a elección del pueblo.',
@@ -3623,6 +3623,23 @@ const datos: PersonajeSinVersion[] = [
     dato: 'Sus discursos son el mejor ejemplo bíblico de una teología correcta en las palabras y equivocada en la aplicación.',
   },
   {
+    id: 'eliu',
+    nombre: 'Eliú',
+    alias: ['eliu', 'elihu'],
+    testamento: 'AT',
+    categoria: 'otro',
+    dificultad: 3,
+    pistas: [
+      'Fue el más joven de los hombres que rodeaban a un rico de Uz cubierto de llagas sobre un montón de ceniza.',
+      'Escuchó callado, por respeto a la edad, mientras tres amigos mayores discutían con el enfermo.',
+      'Al ver que aquellos tres no lograban responder pero seguían condenándolo, "se encendió en ira".',
+      'Habló seis capítulos seguidos: dijo que Dios también usa el dolor para enseñar y advertir, y que envía sueños y un ángel "para apartar al hombre de una mala obra".',
+      'Cuando terminó, Dios mismo tomó la palabra desde el torbellino, sin reprenderlo a él como sí reprendió a los otros tres.',
+    ],
+    cita: 'Job 32:6',
+    dato: 'Es un personaje enigmático: aparece de golpe, no se le nombra antes ni después, y Dios no lo mete ni en el reproche ni en el perdón final.',
+  },
+  {
     id: 'jonadab-recab',
     nombre: 'Jonadab',
     alias: ['jonadab', 'jehonadab', 'jonadab hijo de recab'],
@@ -3887,7 +3904,7 @@ const datos: PersonajeSinVersion[] = [
     alias: ['marta', 'martha'],
     testamento: 'NT',
     categoria: 'mujer',
-    dificultad: 2,
+    dificultad: 1,
     pistas: [
       'Recibió a Jesús en su casa, en una aldea cercana a Jerusalén, y se quejó de que su hermana la dejara servir sola.',
       'Jesús le respondió: "estás afanada y turbada con muchas cosas, pero solo una cosa es necesaria".',
@@ -4324,8 +4341,40 @@ export const CATEGORIAS_JUGABLES: Categoria[] = [
   'apostol',
 ];
 
+/**
+ * "Grupo de juventud": personajes cuya historia de joven (o de niño) es lo
+ * más recordado de ellos. Se usa como filtro en el modo Estudio.
+ */
+export const IDS_JUVENTUD: string[] = [
+  'david', // pastorcillo que venció al gigante
+  'jose-at', // vendido por sus hermanos a los diecisiete años
+  'samuel', // niño que servía en el santuario y oyó la voz de noche
+  'daniel', // joven noble deportado y educado en la corte de Babilonia
+  'jeremias', // llamado siendo muy joven: "soy niño"
+  'timoteo', // "que nadie tenga en poco tu juventud"
+  'josias', // rey de Judá a los ocho años
+  'joas-juda', // rey de Judá a los siete años
+  'salomon', // "soy joven" al pedir sabiduría para reinar
+  'ester', // joven huérfana llevada al palacio
+  'rut', // joven viuda extranjera que emigró con su suegra
+  'miriam', // niña que vigiló la cesta en el río
+  'maria-madre', // joven de Nazaret cuando el ángel la visitó
+  'marcos', // el joven que huyó desnudo la noche del arresto
+  'rebeca', // joven que dio agua al criado y sus camellos en el pozo
+  'benjamin', // el menor de los doce, "el niño"
+  'isaac', // muchacho que subió el monte con la leña
+  'ismael', // el niño que lloraba bajo el arbusto en el desierto
+  'josue', // el joven ayudante que no se apartaba de la Tienda
+  'eliu', // el más joven del círculo de Job: "yo soy joven y vosotros ancianos"
+];
+
 export function personajesPorCategoria(categoria: Categoria): Personaje[] {
   return personajes.filter((p) => p.categoria === categoria);
+}
+
+export function personajesJuventud(): Personaje[] {
+  const set = new Set(IDS_JUVENTUD);
+  return personajes.filter((p) => set.has(p.id));
 }
 
 export function personajesPorTestamento(t: 'AT' | 'NT'): Personaje[] {

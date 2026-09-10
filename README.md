@@ -65,8 +65,13 @@ juega **sin red**. Para instalarla, ábrela en Chrome/Safari móvil y usa
 
 - **Clásico** — 10 personajes al azar.
 - **Contrarreloj** — 60 segundos, los que puedas.
+- **Por nivel** — 10 personajes de dificultad Fácil, Medio o Difícil. La
+  dificultad está fijada personaje a personaje según lo conocido que sea (Adán,
+  Moisés, David… son Fácil; Onésimo, Jael, Habacuc… son Difícil).
 - **Por categoría** — profetas, reyes, mujeres, apóstoles o Nuevo Testamento.
-- **Estudio** — todas las fichas, con buscador y filtros, para memorizar.
+- **Estudio** — todas las fichas, con buscador y filtros. Incluye el filtro
+  **"Grupo de jóvenes"**: personajes cuya historia de joven o de niño es lo más
+  recordado de ellos (David, Timoteo, Samuel, José, Daniel, Ester, Rut…).
 
 ### Progreso
 
