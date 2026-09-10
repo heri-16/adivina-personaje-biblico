@@ -1,0 +1,204 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/inter';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ *
+ *  Tokens — "manuscrito iluminado moderno"
+ *  Colores en canales RGB para poder usar <alpha-value> en Tailwind.
+ * ------------------------------------------------------------------ */
+@layer base {
+  :root,
+  [data-theme='light'] {
+    --c-bg: 250 246 239; /* #faf6ef pergamino claro */
+    --c-raised: 244 238 226;
+    --c-surface: 255 253 247;
+    --c-ink: 58 47 38; /* #3a2f26 tinta sepia oscura */
+    --c-ink-soft: 107 93 77;
+    --c-ink-faint: 150 133 112;
+    --c-gold: 158 126 26; /* dorado envejecido, algo mas oscuro para contraste */
+    --c-gold-dim: 122 98 32;
+    --c-olive: 90 106 46; /* verde oliva apagado — acierto */
+    --c-terracotta: 168 69 46; /* terracota — error */
+    --c-line: 120 90 20;
+
+    --paper-noise-opacity: 0.5;
+    --paper-vignette: rgb(120 90 20 / 0.06);
+    color-scheme: light;
+  }
+
+  [data-theme='dark'] {
+    --c-bg: 26 22 20; /* #1a1614 pergamino profundo */
+    --c-raised: 34 29 26;
+    --c-surface: 42 35 31;
+    --c-ink: 232 220 200; /* sepia claro sobre oscuro */
+    --c-ink-soft: 184 168 136;
+    --c-ink-faint: 138 122 96;
+    --c-gold: 201 162 39; /* #c9a227 dorado envejecido */
+    --c-gold-dim: 143 116 32;
+    --c-olive: 138 152 96;
+    --c-terracotta: 197 106 78;
+    --c-line: 201 162 39;
+
+    --paper-noise-opacity: 0.4;
+    --paper-vignette: rgb(0 0 0 / 0.35);
+    color-scheme: dark;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: rgb(var(--c-bg));
+    color: rgb(var(--c-ink));
+    font-family: theme('fontFamily.sans');
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Grano de papel sutil sobre todo el fondo. */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: var(--paper-noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  /* Vineta calida en los bordes para dar profundidad al pergamino. */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      120% 90% at 50% 0%,
+      transparent 55%,
+      var(--paper-vignette) 100%
+    );
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: theme('fontFamily.serif');
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* iOS: nunca menos de 16px en inputs para evitar el zoom automatico. */
+  input,
+  textarea {
+    font-size: max(16px, 1rem);
+  }
+
+  ::selection {
+    background: rgb(var(--c-gold) / 0.28);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Hoja de pergamino: borde fino dorado, esquinas apenas redondeadas. */
+  .vellum {
+    background-color: rgb(var(--c-surface));
+    border: 1px solid rgb(var(--c-line) / 0.28);
+    border-radius: theme('borderRadius.card');
+    box-shadow: theme('boxShadow.leaf'), theme('boxShadow.inset');
+  }
+
+  .vellum-hairline {
+    border: 1px solid rgb(var(--c-line) / 0.2);
+    border-radius: theme('borderRadius.card');
+  }
+
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(var(--c-gold) / 0.55) 20%,
+      rgb(var(--c-gold) / 0.55) 80%,
+      transparent
+    );
+  }
+
+  /* Objetivo tactil garantizado. */
+  .tap {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .safe-bottom {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.75rem);
+  }
+  .safe-top {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 0.5rem);
+  }
+
+  .focus-gold {
+    outline: none;
+  }
+  .focus-gold:focus-visible {
+    outline: 2px solid rgb(var(--c-gold));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .drop-cap::first-letter {
+    font-family: theme('fontFamily.serif');
+    float: left;
+    font-size: 3.1em;
+    line-height: 0.82;
+    padding-right: 0.08em;
+    margin-top: 0.06em;
+    color: rgb(var(--c-gold));
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
