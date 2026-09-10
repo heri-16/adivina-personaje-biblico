@@ -1049,6 +1049,33 @@ const datos: PersonajeSinVersion[] = [
   //  NUEVO TESTAMENTO — apóstoles y primeros cristianos (25)
   // ================================================================
   {
+    id: 'jesus',
+    nombre: 'Jesús',
+    alias: [
+      'jesucristo',
+      'cristo',
+      'el cristo',
+      'jesus de nazaret',
+      'el mesias',
+      'el nazareno',
+      'el hijo del hombre',
+      'cordero de dios',
+      'emanuel',
+    ],
+    testamento: 'NT',
+    categoria: 'otro',
+    dificultad: 1,
+    pistas: [
+      'Fue un maestro judío de Galilea del siglo I, y en torno a él gira todo el Nuevo Testamento.',
+      'Nació en Belén durante un censo y se crio en Nazaret, en casa de un carpintero.',
+      'Hacia los treinta años fue bautizado en el río Jordán por un predicador del desierto, y después pasó cuarenta días de ayuno siendo tentado.',
+      'Escogió a doce discípulos, pronunció el Sermón del Monte, contó parábolas como la del hijo pródigo y la del buen samaritano, calmó una tormenta y multiplicó panes y peces.',
+      'Entró en Jerusalén montado en un asno, cenó por última vez con los suyos, fue crucificado bajo Poncio Pilato y, según los evangelios, resucitó al tercer día.',
+    ],
+    cita: 'Juan 1:14',
+    dato: 'Es la figura central del cristianismo; buena parte del mundo cuenta hoy los años a partir (aproximadamente) de su nacimiento.',
+  },
+  {
     id: 'juan-bautista',
     nombre: 'Juan el Bautista',
     alias: ['juan bautista', 'el bautista', 'el precursor'],
