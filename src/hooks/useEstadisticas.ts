@@ -25,9 +25,25 @@ function derivar(s: Estadisticas): EstadisticasDerivadas {
   };
 }
 
+/**
+ * Si desde el último día jugado ha pasado más de un día completo, la racha
+ * está rota: la ponemos a 0 al cargar, sin esperar a la siguiente partida.
+ * "mejor" no se toca.
+ */
+function reconciliarRacha(s: Estadisticas): Estadisticas {
+  const { actual, ultimoDia } = s.racha;
+  if (actual === 0 || !ultimoDia) return s;
+  if (diasEntre(ultimoDia, claveDia()) > 1) {
+    return { ...s, racha: { ...s.racha, actual: 0 } };
+  }
+  return s;
+}
+
 export function useEstadisticas() {
   const [stats, setStats] = useState<Estadisticas>(() =>
-    typeof window === 'undefined' ? estadisticasIniciales : cargarEstadisticas(),
+    typeof window === 'undefined'
+      ? estadisticasIniciales
+      : reconciliarRacha(cargarEstadisticas()),
   );
   const [historial, setHistorial] = useState<PartidaResumen[]>(() =>
     typeof window === 'undefined' ? [] : cargarHistorial(),
