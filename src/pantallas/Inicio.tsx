@@ -3,10 +3,10 @@ import {
   BarChart3,
   BookOpenText,
   Flame,
+  Instagram,
   Layers,
   Sparkles,
   Timer,
-  WifiOff,
 } from 'lucide-react';
 import type { PreferenciaTema } from '@/lib/almacenamiento';
 import type { EstadisticasDerivadas } from '@/hooks/useEstadisticas';
@@ -119,10 +119,15 @@ export function Inicio({
           <BarChart3 size={14} strokeWidth={1.7} />
           Estadísticas
         </button>
-        <span className="inline-flex items-center gap-1.5">
-          <WifiOff size={13} strokeWidth={1.7} />
-          Funciona sin conexión
-        </span>
+        <a
+          href="https://www.instagram.com/heri_gh27"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus-gold inline-flex items-center gap-1.5 transition-colors hover:text-gold active:text-gold"
+        >
+          <Instagram size={13} strokeWidth={1.7} />
+          Developer Herí
+        </a>
       </footer>
     </div>
   );
