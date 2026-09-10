@@ -45,7 +45,7 @@ juega **sin red**. Para instalarla, ábrela en Chrome/Safari móvil y usa
 | Script | Qué hace |
 | --- | --- |
 | `npm run typecheck` | Solo comprobación de tipos |
-| `npm run validar-datos` | Verifica `src/data/personajes.ts` (100 fichas, distribución, que ninguna pista nombre al personaje, etc.) |
+| `npm run validar-datos` | Verifica `src/data/personajes.ts` (nº de fichas, formato de citas, versión RV1909, que ninguna pista nombre al personaje, etc.) |
 | `npm run iconos` | Regenera los PNG del PWA en `public/icons/` (sin dependencias) |
 
 ---
@@ -97,8 +97,8 @@ ADIVINA-PERSONAJE/
    ├─ index.css               # tokens CSS, textura de papel (noise SVG), utilidades
    ├─ types.ts                # Personaje, Modo, Estadisticas, RondaResultado…
    ├─ data/
-   │  └─ personajes.ts        # 100 personajes: 40 AT (patriarcas/jueces/reyes),
-   │                          #   20 profetas, 25 NT, 15 mujeres
+   │  └─ personajes.ts        # ~250 personajes (base 40/20/25/15 + ampliación);
+   │                          #   citas y frases según Reina-Valera 1909
    ├─ lib/
    │  ├─ texto.ts             # normalizar() + levenshtein() + validarRespuesta()
    │  ├─ puntaje.ts           # 100/80/60/40/20
@@ -125,7 +125,7 @@ ADIVINA-PERSONAJE/
       ├─ Inicio.tsx           # portada: hero, racha, selección de modo
       ├─ Juego.tsx            # pantalla de partida (layout que se adapta al teclado)
       ├─ Resumen.tsx          # fin de partida: puntuación y desglose por ronda
-      ├─ Estudio.tsx          # las 100 fichas con buscador y filtros
+      ├─ Estudio.tsx          # todas las fichas con buscador y filtros
       └─ Estadisticas.tsx     # racha, métricas, historial y borrado de datos
 ```
 
