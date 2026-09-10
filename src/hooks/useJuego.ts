@@ -126,6 +126,7 @@ export function useJuego(config: ConfigJuego) {
     if (faseRonda !== 'adivinando' || terminado) return;
     setPistasVisibles((n) => Math.min(n + 1, MAX_PISTAS));
     setResultadoRonda(null);
+    setErrorTic(0);
   }, [faseRonda, terminado]);
 
   const rendirse = useCallback(() => {
@@ -155,6 +156,7 @@ export function useJuego(config: ConfigJuego) {
     setIntentos(0);
     setFaseRonda('adivinando');
     setResultadoRonda(null);
+    setErrorTic(0);
   }, [indice, cola.length, resultados.length, objetivoRondas]);
 
   const resumen: PartidaResumen = useMemo(
